@@ -1,7 +1,7 @@
 # Cone Segmentation
 #### A software package for segmenting the boundaries of cone photoreceptors in non-confocal adaptive optics images such as split detection. Cone photoreceptor segmentation is achieved through a circularly constrained active contour model (CCACM). Circular templates and image gradients attract active contours toward cone photoreceptor boundaries.
 
-*Jianfei Liu (NEI/NIH), Andrei Volkov (NEI/NIH Contractor), and Johnny Tam (NEI/NIH), with research support from the Intramural Research Program of the National Institutes of Health.*
+*If any portion of this code is used, please cite the following paper in your publication:*
 
 ### BibTeX
 
@@ -20,11 +20,48 @@
 	    eprint = {https://arvojournals.org/arvo/content\_public/journal/iovs/937492/i1552-5783-59-11-4639.pdf},
 	}
 
-<img src="assets/app_main.png" />
-
 ---------------
 
-## Dependencies
+## Getting Started
+
+There are two ways to use the software:
+
+- Option 1: Run using prebuilt executables (No installation required)
+- Option 2: Install Dependencies and Run from Source
+
+## Option 1: Run using prebuilt executables
+
+1. Download the executable file (.exe for Windows and .dmg for macOS) from the **Releases** section with the Latest tag.
+
+2. Install the executable file.
+
+3. Once installed, double click on the software icon to open the software.
+
+   <img src="assets/ConeSegWindow1.png" />
+
+4. Click on the **Open** button, to load the input cone image.
+
+   <img src="assets/ConeSegWindowOpen2.png" />
+
+5. Then click on the **Segment** button to automatically segment the individual cones.
+
+   <img src="assets/ConeSegWindowSegment3.png" />
+
+6. The **Draw**, **Erase S**, **Erase M** and **Undo** button allows to add, erase single/multiple and undo past operations.
+
+7. The **Settings** tab provides options to display the centroids of the cones and also highlight the individual cone regions along with the contours.
+
+   <img src="assets/ConeSegWindowSettings4.png" />
+
+   <img src="assets/ConeSegOutput5.png" />
+
+8. The **Save** button saves the .CSV file with the contains a sequence of *(x, y)* coordinate pairs that trace the closed contour of the individual cones.
+
+9. The **Help** button provides more documentation about the software features including a table of keyboard shortcuts for common actions.
+
+## Option 2: Install Dependencies and Run from Source
+
+### Dependencies
 
 This is a C++ project dependent on the following 3rd party open-source libraries:
 
@@ -36,7 +73,7 @@ This is a C++ project dependent on the following 3rd party open-source libraries
 
 <a href="#mac">Skip to Mac OS instructions.</a>
 
-## Setting up development environment (Windows x64)
+### Setting up development environment (Windows x64)
 
 1. Download and install required tools:
    - [MS Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) (or higher) with C++ and Windows SDK
@@ -86,7 +123,7 @@ You should see a screen like this:
 Click "Configure", then "Generate", then "Open Project". This will open MS Visual Studio. Switch the configuration from "Debug" to "Release", right-click on "ALL_BUILD", and select "Build". If the build is successful, the result is `C:/AO/ConeSegmentation/build/Release/ConeSegmentation.exe`. The `C:/AO/ConeSegmentation/build/Release` directory contains all files necessary to run the application. To build the distribution executable, right-click on "PACKAGE" and select "Build". The result is the `C:/AO/ConeSegmentation/build/ConeSegmentation-{version}-win64.exe` Windows installer, which can be distributed to other systems.
 
 <a name="mac"></a>
-## Setting up development environment (Mac OS)
+### Setting up development environment (Mac OS)
 
 1. Download and install required tools:
    - Xcode (via App Store)
@@ -142,5 +179,4 @@ To install ConeSegmentation on a different Mac computer, transfer the `ConeSegme
 <img src="assets/mac_dmg_distro.png" />
 
 You can run the application right away by double clicking on the icon, but a better idea may be to drag it over the "Applications" folder (which is just a symbolic link to local "Applications" folder). Once ConeSegmentation in "Applications", you can eject the mounted volume and delete the `ConeSegmentation-{version}-Darwin.dmg` file.
- 
 
