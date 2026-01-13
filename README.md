@@ -33,7 +33,11 @@ There are two ways to use the software:
 
 1. Download the executable file (.exe for Windows and .dmg for macOS) from the **Releases** section with the Latest tag.
 
-2. Install the executable file.
+2. On Windows systems, installation can be completed by double-clicking the `.exe` file and following the on-screen prompts. For Mac OS, the `.dmg` is a Mac OS disk image file. When opened, it asks for accepting the license agreement, then mounts itself as an external drive and opens a Finder window, that looks like this:
+
+   <img src="assets/mac_dmg_distro.png" />
+
+   You can run the app by double-clicking on the icon, or copying it to your Applications folder by dragging the icon over "Applications". Once ConeSegmentation is in your Applications folder, you can eject the *ConeSegmentation* disk, and delete the `.dmg` file.
 
 3. Once installed, double click on the software icon to open the software.
 
@@ -47,7 +51,7 @@ There are two ways to use the software:
 
    <img src="assets/ConeSegWindowSegment3.png" />
 
-6. The **Draw**, **Erase S**, **Erase M** and **Undo** button allows to add, erase single/multiple and undo past operations.
+6. The **Draw**, **Erase S**, **Erase M** and **Redo** buttons allow to add annotations, erase single/multiple annotations and undo past operation.
 
 7. The **Settings** tab provides options to display the centroids of the cones and also highlight the individual cone regions along with the contours.
 
@@ -55,7 +59,7 @@ There are two ways to use the software:
 
    <img src="assets/ConeSegOutput5.png" />
 
-8. The **Save** button saves the .CSV file with the contains a sequence of *(x, y)* coordinate pairs that trace the closed contour of the individual cones.
+8. The **Save** button saves the `.csv` file which contains a sequence of *(x, y)* coordinate pairs that trace the closed contours of the individual cones.
 
 9. The **Help** button provides more documentation about the software features including a table of keyboard shortcuts for common actions.
 
